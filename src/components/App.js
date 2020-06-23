@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BackgroundSwitch from './BackgroundSwitch'
 
 function App() {
+  let [darkMode, setBackgroundMode] = useState(false)
+
+  const handleInputChange = e => {
+    setBackgroundMode(e.target.checked)
+  }
   return (
     <React.Fragment>
-      <BackgroundSwitch />
+      <BackgroundSwitch
+        darkMode={darkMode}
+        onInputChange={handleInputChange}
+        setBackgroundMode={setBackgroundMode}
+      />
       <header className='container'>
-        <h1 className='bold'>Hi!</h1>
+        <h1>Hello,</h1>
         <h2 className='intro'>
           I’m <span className='bold'>Konstantin Basmanov</span>, a front-end
           software engineer with a passion for building captivating interfaces

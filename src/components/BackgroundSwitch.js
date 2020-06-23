@@ -1,10 +1,25 @@
 import React from 'react'
 
-export default function BackgroundSwitch() {
+export default function BackgroundSwitch({
+  darkMode,
+  onInputChange,
+  count,
+  onCount
+}) {
+  console.log(darkMode)
   return (
     <div className='switch-container'>
-      <input type='checkbox' name='switch' id='switch' />
-      <label htmlFor='switch' id='toggle'></label>
+      <form>
+        <label className='switch'>
+          <input
+            name='switch'
+            type='checkbox'
+            checked={darkMode}
+            onChange={e => onInputChange(e)}
+          />
+          <span className='slider'></span>
+        </label>
+      </form>
     </div>
   )
 }

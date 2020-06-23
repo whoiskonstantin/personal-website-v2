@@ -53,6 +53,9 @@ function App() {
           Skills
         </h2>
         <div className='section-content'>
+          <div className='bubbling-container'>
+            <div className='bubbling-icons'></div>
+          </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
             perferendis explicabo deserunt expedita, dolor sit soluta vitae

@@ -37,9 +37,6 @@ a {
 a.darkLink {
   border-bottom: 2px solid var(--d-switch-color);
 }
-/* a:hover {
-  border-bottom: none;
-} */
 
 header {
   padding: 120px 10px 100px 10px;
@@ -52,18 +49,6 @@ section {
 footer {
   background-color: var(--footer-color);
   padding: 20px 30px;
-}
-
-.App {
-  width: 100%;
-  background-color: var(--main-bg-color);
-  transition: background-color 0.6s;
-}
-
-.darkBg {
-  background-color: var(--d-main-bg-color);
-  color: var(--d-font-color);
-  transition: background-color 0.6s;
 }
 
 .section-content {
@@ -82,12 +67,81 @@ footer {
   font-weight: 500;
 }
 
-.darkTitle {
-  color: var(--d-subtitle-color);
+/* .bubbling-icons {
+  box-shadow: inset 3px 3px 6px -2px grey;
+  animation-name: bubblinger-vert-down;
+  border-radius: 60px;
+  width: 154px;
+  height: 154px;
+  animation-duration: 8s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  background-image: url('./resources/icons.png');
+  background-size: 154px 462px;
+}
+
+@keyframes bubblinger-vert-down {
+  0% {
+    background-position: 0 0;
+  }
+  5% {
+    background-position: 0 154px;
+  }
+  35% {
+    background-position: 0 154px;
+  }
+  40% {
+    background-position: 0 308px;
+  }
+  68% {
+    background-position: 0 308px;
+  }
+  73% {
+    background-position: 0 462px;
+  }
+  100% {
+    background-position: 0 462px;
+  }
+} */
+.bubbling-icons {
+  box-shadow: inset 3px 3px 6px -2px grey;
+  animation-name: bubblinger-vert-down;
+  border-radius: 60px;
+  width: 100px;
+  height: 100px;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1);
+  background-image: url('./resources/icons.png');
+  background-size: 100px 300px;
+}
+
+@keyframes bubblinger-vert-down {
+  0% {
+    background-position: 0 0;
+  }
+  5% {
+    background-position: 0 100px;
+  }
+  35% {
+    background-position: 0 100px;
+  }
+  40% {
+    background-position: 0 200px;
+  }
+  68% {
+    background-position: 0 200px;
+  }
+  73% {
+    background-position: 0 300px;
+  }
+  100% {
+    background-position: 0 300px;
+  }
 }
 
 /* MEDIA QUERIES */
-
 @media (min-width: 360px) {
   h1 {
     font-size: 1.7rem;
@@ -146,7 +200,21 @@ footer {
     max-width: 700px;
   }
 }
+/* DARK THEME CLASSES */
+.App {
+  width: 100%;
+  background-color: var(--main-bg-color);
+  transition: background-color 0.6s;
+}
 
+.darkBg {
+  background-color: var(--d-main-bg-color);
+  color: var(--d-font-color);
+  transition: background-color 0.6s;
+}
+.darkTitle {
+  color: var(--d-subtitle-color);
+}
 /* SLIDER */
 .switch-container {
   position: absolute;

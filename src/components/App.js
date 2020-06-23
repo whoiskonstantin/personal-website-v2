@@ -8,7 +8,7 @@ function App() {
     setBackgroundMode(e.target.checked)
   }
   return (
-    <React.Fragment>
+    <div className={`App ${darkMode ? 'darkMode' : ''}`}>
       <BackgroundSwitch
         darkMode={darkMode}
         onInputChange={handleInputChange}
@@ -61,7 +61,7 @@ function App() {
           <span>Konstantin Basmanov /"YEAR"/</span>
         </h3>
       </footer>
-    </React.Fragment>
+    </div>
   )
 }
 

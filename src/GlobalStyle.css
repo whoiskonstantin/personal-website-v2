@@ -24,6 +24,7 @@ h2,
 h3 {
   font-weight: 300;
 }
+
 p {
   font-weight: 300;
 }
@@ -32,6 +33,10 @@ a {
   color: inherit;
   padding-bottom: 2px;
   border-bottom: 2px solid var(--switch-color);
+}
+
+li {
+  display: block;
 }
 
 a.darkLink {
@@ -43,7 +48,7 @@ header {
   box-sizing: border-box;
 }
 section {
-  padding: 50px 0;
+  padding: 20px 0;
   box-sizing: border-box;
 }
 footer {
@@ -51,8 +56,81 @@ footer {
   padding: 20px 30px;
 }
 
+.skills-ul {
+  padding: 0 0 0 20px;
+  min-width: 130px;
+}
+
+.skills-li {
+  margin-bottom: 5px;
+}
+
 .section-content {
-  padding: 0 30px;
+  padding: 0 10px;
+}
+
+.space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+}
+/* .center {
+  display: flex;
+  justify-content: center;
+} */
+
+/* .center-ul {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px;
+} */
+
+.sub-section {
+  border: 2px solid var(--subtitle-color);
+  border-radius: 20px;
+  padding: 35px 10px;
+  position: relative;
+  margin: 50px 0;
+}
+
+.sub-section h3 {
+  z-index: 10;
+  margin: 0;
+  position: absolute;
+  background-color: var(--main-bg-color);
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--subtitle-color);
+}
+h3.sub-tl-lang {
+  top: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  text-align: center;
+  padding: 0 20px;
+}
+h3.sub-tl-tls-res {
+  top: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 180px;
+  text-align: center;
+  padding: 0 17px;
+}
+h3.sub-tl-des {
+  top: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 0 20px;
 }
 
 .container {
@@ -67,57 +145,37 @@ footer {
   font-weight: 500;
 }
 
-/* .bubbling-icons {
-  box-shadow: inset 3px 3px 6px -2px grey;
-  animation-name: bubblinger-vert-down;
-  border-radius: 60px;
-  width: 154px;
-  height: 154px;
-  animation-duration: 8s;
-  animation-delay: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier(1, 0, 0, 1);
-  background-image: url('./resources/icons.png');
-  background-size: 154px 462px;
+.bubbling-container {
+  margin: 5px;
 }
 
-@keyframes bubblinger-vert-down {
-  0% {
-    background-position: 0 0;
-  }
-  5% {
-    background-position: 0 154px;
-  }
-  35% {
-    background-position: 0 154px;
-  }
-  40% {
-    background-position: 0 308px;
-  }
-  68% {
-    background-position: 0 308px;
-  }
-  73% {
-    background-position: 0 462px;
-  }
-  100% {
-    background-position: 0 462px;
-  }
-} */
 .bubbling-icons {
-  box-shadow: inset 3px 3px 6px -2px grey;
-  animation-name: bubblinger-vert-down;
+  box-shadow: inset 2px 2px 5px -1px grey;
   border-radius: 60px;
   width: 100px;
   height: 100px;
   animation-duration: 13s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1);
-  background-image: url('./resources/icons.png');
   background-size: 100px 300px;
 }
 
-@keyframes bubblinger-vert-down {
+.languages {
+  animation-name: bubbling;
+  background-image: url('./resources/language-icons.svg');
+}
+.tools {
+  animation-name: bubbling;
+  animation-delay: 1s;
+  background-image: url('./resources/tools-icons.svg');
+}
+.adobe {
+  animation-name: bubbling;
+  animation-delay: 2s;
+  background-image: url('./resources/adobe-icons.svg');
+}
+
+@keyframes bubbling {
   0% {
     background-position: 0 0;
   }

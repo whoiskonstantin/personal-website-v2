@@ -52,16 +52,44 @@ function App() {
         <h2 className={`section-title ${darkMode ? 'darkTitle' : ''}`}>
           Skills
         </h2>
+
         <div className='section-content'>
-          <div className='bubbling-container'>
-            <div className='bubbling-icons'></div>
+          <div className='sub-section space-around'>
+            <h3 className='sub-tl-lang'>Languages</h3>
+            <div className='bubbling-container column'>
+              <div className='bubbling-icons languages'></div>
+            </div>
+            <ul className='skills-ul'>
+              <li className='skills-li'>Javascript (ES6)</li>
+              <li className='skills-li'>HTML 5</li>
+              <li className='skills-li'>CSS3</li>
+            </ul>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-            perferendis explicabo deserunt expedita, dolor sit soluta vitae
-            perspiciatis id rem velit, aliquid ducimus quisquam libero
-            cupiditate dicta, officia illo culpa.
-          </p>
+          <div className='sub-section space-around'>
+            <h3 className='sub-tl-tls-res'>Tools and Resources</h3>
+            <div className='bubbling-container column'>
+              <div className='bubbling-icons tools'></div>
+            </div>
+            <ul className='skills-ul'>
+              <li className='skills-li'>React & Redux</li>
+              <li className='skills-li'>AWS</li>
+              <li className='skills-li'>Git & Github</li>
+              <li className='skills-li'>GSAP</li>
+              <li className='skills-li'>Postman</li>
+              <li className='skills-li'>Chrome DevTools</li>
+            </ul>
+          </div>
+          <div className='sub-section space-around'>
+            <h3 className='sub-tl-des'>Design</h3>
+            <div className='bubbling-container column'>
+              <div className='bubbling-icons adobe'></div>
+            </div>
+            <ul className='skills-ul'>
+              <li className='skills-li'>Photoshop</li>
+              <li className='skills-li'>Illustrator</li>
+              <li className='skills-li'>XD</li>
+            </ul>
+          </div>
         </div>
       </section>
       <section className='container flex'>

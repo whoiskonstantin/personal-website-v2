@@ -68,8 +68,8 @@ function App() {
           </div>
           <div className='sub-section space-around'>
             <h3 className='sub-tl-tls-res'>Tools and Resources</h3>
-            <div className='bubbling-container'>
-              <div className='bubbling-icons tools column'></div>
+            <div className='bubbling-container column'>
+              <div className='bubbling-icons tools'></div>
             </div>
             <ul className='skills-ul'>
               <li className='skills-li'>React & Redux</li>

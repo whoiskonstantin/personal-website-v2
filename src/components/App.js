@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import BackgroundSwitch from './BackgroundSwitch'
+import project1 from '../resources/project-1.png'
 
 function App() {
   let [darkMode, setBackgroundMode] = useState(false)
@@ -103,6 +104,13 @@ function App() {
             perspiciatis id rem velit, aliquid ducimus quisquam libero
             cupiditate dicta, officia illo culpa.
           </p>
+          <div className='showcase'>
+            <img
+              className='project1'
+              src={project1}
+              alt='Personal Website v1'
+            />
+          </div>
         </div>
       </section>
       <footer>

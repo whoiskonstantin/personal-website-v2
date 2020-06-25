@@ -7,7 +7,7 @@ export default function BackgroundSwitch({
   onCount
 }) {
   return (
-    <div className='switch-container'>
+    <div className='switch-container no_highlights'>
       <label className='switch'>
         <input
           name='switch'

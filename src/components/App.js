@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import BackgroundSwitch from './BackgroundSwitch'
 import Greeting from './Greeting'
 import project1 from '../resources/project-1.png'
-import Test from './Test'
 
 function App() {
   const handleBackgorundColor = () => {
@@ -29,7 +28,6 @@ function App() {
         setBackgroundMode={setBackgroundMode}
       />
       <header className='container'>
-        <Test />
         <Greeting />
         <h2 className='intro'>
           I’m <span className='bold'>Konstantin Basmanov</span>, a front-end

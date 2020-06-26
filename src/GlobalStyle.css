@@ -57,13 +57,16 @@ footer {
   background-color: var(--footer-color);
   padding: 20px 30px;
 }
-.boxes {
-  background-color: red;
+.greeting {
+  position: relative;
+  height: 100px;
 }
 
 .flip {
-  position: relative;
+  position: absolute;
+  z-index: 10;
 }
+
 .skills-ul {
   padding: 0 0 0 20px;
   min-width: 130px;

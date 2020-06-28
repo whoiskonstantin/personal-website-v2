@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { gsap, Power0 } from 'gsap'
 export default function Greeting() {
   const greetingsList = [
@@ -10,8 +10,6 @@ export default function Greeting() {
     'Hola!',
     '你好!'
   ]
-
-  let greetingRef = useRef(null)
 
   const [indx, setIndx] = useState(0)
 
@@ -55,12 +53,7 @@ export default function Greeting() {
   }, [indx])
 
   return (
-    <div
-      className='greeting'
-      ref={element => {
-        greetingRef = element
-      }}
-    >
+    <div className='greeting'>
       <h1 className='flip'>{greetingsList[indx]}</h1>
     </div>
   )

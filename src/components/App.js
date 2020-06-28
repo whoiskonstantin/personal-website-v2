@@ -7,9 +7,9 @@ function App() {
   const handleBackgorundColor = () => {
     let time = new Date().getHours()
     if (time > 19 && time < 8) {
-      return false
+      return true
     }
-    return true
+    return false
   }
 
   let [darkMode, setBackgroundMode] = useState(handleBackgorundColor())
@@ -21,7 +21,7 @@ function App() {
     //   : document.body.classList.remove('darkMode')
   }
   return (
-    <div className={`App ${darkMode ? 'darkBg' : ''}`}>
+    <div className='App' id={darkMode ? 'darkBg' : ''}>
       <BackgroundSwitch
         darkMode={darkMode}
         onInputChange={handleInputChange}
@@ -47,7 +47,7 @@ function App() {
         </h3>
       </header>
       <section className='container flex'>
-        <h2 className={`section-title ${darkMode ? 'darkTitle' : ''}`}>
+        <h2 className='section-title' id={darkMode ? 'darkTitle' : ''}>
           Background
         </h2>
         <div className='section-content'>
@@ -80,39 +80,51 @@ function App() {
           </p>
         </div>
       </section>
-      <section className='container flex'>
-        <h2 className={`section-title ${darkMode ? 'darkTitle' : ''}`}>
+      <section className='container flex '>
+        <h2 className='section-title' id={darkMode ? 'darkTitle' : ''}>
           Skills
         </h2>
 
-        <div className='section-content'>
-          <div className='sub-section space-around'>
-            <h3 className='sub-tl-lang'>Languages</h3>
+        <div className='section-content flex-wide'>
+          <div
+            className='sub-section space-around'
+            id={darkMode ? 'darkBorder' : ''}
+          >
+            <h3 className='sub-tl-lang' id={darkMode ? 'darkTitle' : ''}>
+              Languages
+            </h3>
             <div className='bubbling-container column'>
               <div className='bubbling-icons languages'></div>
             </div>
             <ul className='skills-ul'>
-              <li className='skills-li'>Javascript (ES6)</li>
-              <li className='skills-li'>HTML 5</li>
+              <li className='skills-li'>Javascript(ES6)</li>
+              <li className='skills-li'>HTML5</li>
               <li className='skills-li'>CSS3</li>
             </ul>
           </div>
-          <div className='sub-section space-around'>
-            <h3 className='sub-tl-tls-res'>Tools and Resources</h3>
+          <div
+            className='sub-section space-around'
+            id={darkMode ? 'darkBorder' : ''}
+          >
+            <h3 className='sub-tl-tls-res' id={darkMode ? 'darkTitle' : ''}>
+              Tools and Resources
+            </h3>
             <div className='bubbling-container column'>
               <div className='bubbling-icons tools'></div>
             </div>
             <ul className='skills-ul'>
-              <li className='skills-li'>React & Redux</li>
+              <li className='skills-li'>React/Redux</li>
               <li className='skills-li'>AWS</li>
               <li className='skills-li'>Git & Github</li>
-              <li className='skills-li'>GSAP</li>
-              <li className='skills-li'>Postman</li>
-              <li className='skills-li'>Chrome DevTools</li>
             </ul>
           </div>
-          <div className='sub-section space-around'>
-            <h3 className='sub-tl-des'>Design</h3>
+          <div
+            className='sub-section space-around'
+            id={darkMode ? 'darkBorder' : ''}
+          >
+            <h3 className='sub-tl-des' id={darkMode ? 'darkTitle' : ''}>
+              Design
+            </h3>
             <div className='bubbling-container column'>
               <div className='bubbling-icons adobe'></div>
             </div>
@@ -125,7 +137,7 @@ function App() {
         </div>
       </section>
       <section className='container flex'>
-        <h2 className={`section-title ${darkMode ? 'darkTitle' : ''}`}>
+        <h2 className='section-title' id={darkMode ? 'darkTitle' : ''}>
           Projects
         </h2>
         <div className='section-content'>

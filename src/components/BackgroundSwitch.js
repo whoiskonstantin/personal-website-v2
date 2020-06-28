@@ -1,4 +1,6 @@
 import React from 'react'
+import { Sun } from './Sun'
+import { Moon } from './Moon'
 
 export default function BackgroundSwitch({
   darkMode,
@@ -8,6 +10,10 @@ export default function BackgroundSwitch({
 }) {
   return (
     <div className='switch-container no_highlights'>
+      <div className='switch-icons'>
+        <Sun darkMode={darkMode} />
+      </div>
+
       <label className='switch'>
         <input
           name='switch'
@@ -17,6 +23,9 @@ export default function BackgroundSwitch({
         />
         <span className='slider'></span>
       </label>
+      <div className='switch-icons moon'>
+        <Moon darkMode={darkMode} />
+      </div>
     </div>
   )
 }

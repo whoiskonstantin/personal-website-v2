@@ -57,6 +57,7 @@ footer {
   background-color: var(--footer-color);
   padding: 20px 30px;
 }
+
 .greeting {
   position: relative;
   height: 100px;
@@ -69,7 +70,11 @@ footer {
 
 .skills-ul {
   padding: 0 0 0 20px;
-  min-width: 130px;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: flex; */
+  justify-content: center;
 }
 
 .skills-li {
@@ -77,7 +82,7 @@ footer {
 }
 
 .section-content {
-  padding: 0 10px;
+  padding: 0;
 }
 
 .space-around {
@@ -96,11 +101,11 @@ footer {
 } */
 
 .sub-section {
-  border: 2px solid var(--subtitle-color);
+  border: 1px solid var(--subtitle-color);
   border-radius: 20px;
   padding: 15px 10px;
   position: relative;
-  margin: 50px 0;
+  margin: 30px 0;
 }
 
 .sub-section h3 {
@@ -139,6 +144,7 @@ h3.sub-tl-des {
 .container {
   margin: 0 auto;
   width: 90%;
+  max-width: 1060px;
 }
 .bold {
   font-weight: 600;
@@ -155,12 +161,12 @@ h3.sub-tl-des {
 .bubbling-icons {
   box-shadow: inset 2px 2px 5px -1px grey;
   border-radius: 60px;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   animation-duration: 13s;
   /* animation-iteration-count: infinite; */
   animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1);
-  background-size: 80px 240px;
+  background-size: 70px 210px;
 }
 
 .languages {
@@ -185,27 +191,32 @@ h3.sub-tl-des {
 .project1 {
   width: 100%;
 }
+.flex-wide {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 @keyframes bubbling {
   0% {
     background-position: 0 0;
   }
   5% {
-    background-position: 0 80px;
+    background-position: 0 70px;
   }
   35% {
-    background-position: 0 80px;
+    background-position: 0 70px;
   }
   40% {
-    background-position: 0 160px;
+    background-position: 0 140px;
   }
   68% {
-    background-position: 0 160px;
+    background-position: 0 140px;
   }
   73% {
-    background-position: 0 240px;
+    background-position: 0 210px;
   }
   100% {
-    background-position: 0 240px;
+    background-position: 0 210px;
   }
 }
 
@@ -239,16 +250,18 @@ h3.sub-tl-des {
   li {
     font-size: 1.3rem;
   }
+  .sub-section {
+    margin: 15px 5px;
+  }
 }
-@media (min-width: 900px) {
+@media (min-width: 966px) {
   .section-title {
     min-width: 200px;
     margin-top: 0;
   }
-  .flex {
-    display: flex;
-    justify-content: space-around;
-    align-content: flex-start;
+
+  .flex-wide {
+    justify-content: space-between;
   }
   .section-content p {
     margin-top: 0.7rem;
@@ -256,6 +269,7 @@ h3.sub-tl-des {
 
   .sub-section {
     max-width: 500px;
+    margin: 15px 0;
   }
   .section-content {
     width: 100%;
@@ -272,32 +286,58 @@ h3.sub-tl-des {
     max-width: 700px;
   }
 }
-/* DARK THEME CLASSES */
+@media (min-width: 1182px) {
+  .flex {
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+  }
+}
+
+/* COLOR THEME CLASSES */
 .App {
-  width: 100%;
+  /* width: 100%; */
   background-color: var(--main-bg-color);
   transition: background-color 0.6s;
 }
 
-.darkBg {
+#darkBg {
   background-color: var(--d-main-bg-color);
   color: var(--d-font-color);
   transition: background-color 0.6s;
 }
-.darkTitle {
+#darkTitle {
   color: var(--d-subtitle-color);
+  background-color: var(--d-main-bg-color);
+}
+
+#darkBorder {
+  border-color: var(--d-font-color);
+}
+
+#darkText {
+  color: var(--d-font-color);
 }
 /* SLIDER */
+.switch-icons {
+  height: 20px;
+  padding-top: 2px;
+  width: 20px;
+  box-sizing: border-box;
+}
+.moon {
+  padding-top: 3px;
+}
 .switch-container {
   position: absolute;
   display: flex;
-  top: 10px;
-  right: 20px;
+  top: 30px;
+  right: 30px;
 }
 /* Container around the slider */
 .switch {
   position: relative;
-  margin: 10px 10px 0 10px;
+  margin: 0 10px;
   display: inline-block;
   width: 47px;
   height: 25px;

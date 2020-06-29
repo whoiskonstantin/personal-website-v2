@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import BackgroundSwitch from './BackgroundSwitch'
 import Greeting from './Greeting'
-import project1 from '../resources/project-1.png'
+import PWdesktop from '../resources/showcase/personal-website-desktop.png'
+import PWmobile from '../resources/showcase/personal-website-mobile.png'
+import Hangman1 from '../resources/showcase/hangman-1.png'
+import Hangman2 from '../resources/showcase/hangman-2.png'
+import FLdesktop from '../resources/showcase/firstline-desktop.png'
+import FLmobile from '../resources/showcase/firstline-mobile.png'
 
 function App() {
   const handleBackgorundColor = () => {
@@ -12,8 +17,8 @@ function App() {
     return false
   }
 
-  let [darkMode, setBackgroundMode] = useState(handleBackgorundColor())
-
+  // let [darkMode, setBackgroundMode] = useState(handleBackgorundColor())
+  let [darkMode, setBackgroundMode] = useState(true)
   const handleInputChange = e => {
     setBackgroundMode(e.target.checked)
     // e.target.checked
@@ -147,12 +152,39 @@ function App() {
             perspiciatis id rem velit, aliquid ducimus quisquam libero
             cupiditate dicta, officia illo culpa.
           </p>
-          <div className='showcase'>
+          <div className='projects-sub-section'>
+            <div className='project-images'>
+              <img
+                className='desktop'
+                src={FLdesktop}
+                alt='Personal Website v1'
+              />
+              <img
+                className='mobile'
+                src={FLmobile}
+                alt='Personal Website v1'
+              />
+            </div>
+          </div>
+          <div className='project-images'>
             <img
-              className='project1'
-              src={project1}
+              className='mobile mobile-large'
+              src={Hangman1}
               alt='Personal Website v1'
             />
+            <img
+              className='mobile mobile-large'
+              src={Hangman2}
+              alt='Personal Website v1'
+            />
+          </div>
+          <div className='project-images'>
+            <img
+              className='desktop'
+              src={PWdesktop}
+              alt='Personal Website v1'
+            />
+            <img className='mobile' src={PWmobile} alt='Personal Website v1' />
           </div>
         </div>
       </section>

@@ -171,25 +171,38 @@ h3.sub-tl-des {
 
 .languages {
   animation-name: bubbling;
-  background-image: url('./resources/language-icons.svg');
+  background-image: url('./resources/skills/language-icons.svg');
 }
 .tools {
   animation-name: bubbling;
   animation-delay: 1s;
-  background-image: url('./resources/tools-icons.svg');
+  background-image: url('./resources/skills/tools-icons.svg');
 }
 .adobe {
   animation-name: bubbling;
   animation-delay: 2s;
-  background-image: url('./resources/adobe-icons.svg');
+  background-image: url('./resources/skills/adobe-icons.svg');
 }
-.showcase {
+.project-images {
   width: 100%;
+  margin: 0 auto;
   max-width: 600px;
+  display: flex;
+  justify-content: center;
+  /* align-content: center; */
   box-sizing: border-box;
 }
-.project1 {
-  width: 100%;
+.desktop {
+  width: 250px;
+}
+.mobile {
+  margin-top: 25px;
+  width: 100px;
+  /* height: 100%; */
+  align-self: center;
+}
+.mobile-large {
+  width: 150px;
 }
 .flex-wide {
   display: flex;

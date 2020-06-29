@@ -92,12 +92,10 @@ function App() {
 
         <div className='section-content flex-wide'>
           <div
-            className='sub-section space-around'
+            className='sub-section skills-section space-around'
             id={darkMode ? 'darkBorder' : ''}
           >
-            <h3 className='sub-tl-lang' id={darkMode ? 'darkTitle' : ''}>
-              Languages
-            </h3>
+            <h3 id={darkMode ? 'darkTitle' : ''}>Languages</h3>
             <div className='bubbling-container column'>
               <div className='bubbling-icons languages'></div>
             </div>
@@ -108,10 +106,10 @@ function App() {
             </ul>
           </div>
           <div
-            className='sub-section space-around'
+            className='sub-section skills-section space-around'
             id={darkMode ? 'darkBorder' : ''}
           >
-            <h3 className='sub-tl-tls-res' id={darkMode ? 'darkTitle' : ''}>
+            <h3 className='tools-res-title' id={darkMode ? 'darkTitle' : ''}>
               Tools and Resources
             </h3>
             <div className='bubbling-container column'>
@@ -124,12 +122,10 @@ function App() {
             </ul>
           </div>
           <div
-            className='sub-section space-around'
+            className='sub-section skills-section space-around'
             id={darkMode ? 'darkBorder' : ''}
           >
-            <h3 className='sub-tl-des' id={darkMode ? 'darkTitle' : ''}>
-              Design
-            </h3>
+            <h3 id={darkMode ? 'darkTitle' : ''}>Design</h3>
             <div className='bubbling-container column'>
               <div className='bubbling-icons adobe'></div>
             </div>
@@ -146,13 +142,11 @@ function App() {
           Projects
         </h2>
         <div className='section-content'>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-            perferendis explicabo deserunt expedita, dolor sit soluta vitae
-            perspiciatis id rem velit, aliquid ducimus quisquam libero
-            cupiditate dicta, officia illo culpa.
-          </p>
-          <div className='projects-sub-section'>
+          <div
+            className='sub-section projects-sub-section'
+            id={darkMode ? 'darkBorder' : ''}
+          >
+            <h3 id={darkMode ? 'darkTitle' : ''}>Firstline Properties</h3>
             <div className='project-images'>
               <img
                 className='desktop'
@@ -165,26 +159,80 @@ function App() {
                 alt='Personal Website v1'
               />
             </div>
+            <div>
+              <p>
+                A website for a real estate company in Bulgaria. This website
+                was a part of a rebranding and operations optimization process
+                where I was tasked with creating new company name, logo, product
+                catalogues, Facebook page, CRM solution and a website. The goal
+                of the project was to shift company’s focus from Russian
+                speaking to the English speaking clients. It was my first web
+                development project, and I worked on it with the help of other
+                web developer.
+              </p>
+            </div>
           </div>
-          <div className='project-images'>
-            <img
-              className='mobile mobile-large'
-              src={Hangman1}
-              alt='Personal Website v1'
-            />
-            <img
-              className='mobile mobile-large'
-              src={Hangman2}
-              alt='Personal Website v1'
-            />
+          <div
+            className='sub-section projects-sub-section'
+            id={darkMode ? 'darkBorder' : ''}
+          >
+            <h3 id={darkMode ? 'darkTitle' : ''}>Travel Hangman</h3>
+            <div className='project-images'>
+              <img
+                className='mobile mobile-large'
+                src={Hangman1}
+                alt='Personal Website v1'
+              />
+              <img
+                className='mobile mobile-large'
+                src={Hangman2}
+                alt='Personal Website v1'
+              />
+            </div>
+            <div>
+              <p>
+                My first React web application. In this game player has to
+                correctly guess the capitals of the random countries. Player can
+                choose between different game modes, which include all countries
+                of the world (245), countries recognized by united nations (193)
+                and different regions from those lists. It uses my own graphics
+                and animations implemented trough GSAP library. Application uses
+                stored JSON file from RESTful API
+                (https://restcountries.eu/rest/v2/all). Biggest challenge with
+                this project was to filter and update the objects from JSON
+                file. Some of those updates were: to add properties for
+                countries recognized and not recognized by UN, and to sort
+                through and change special letters like é, å, û to e, a u. All
+                of those manipulations were done with javascript functions.
+              </p>
+            </div>
           </div>
-          <div className='project-images'>
-            <img
-              className='desktop'
-              src={PWdesktop}
-              alt='Personal Website v1'
-            />
-            <img className='mobile' src={PWmobile} alt='Personal Website v1' />
+          <div
+            className='sub-section projects-sub-section'
+            id={darkMode ? 'darkBorder' : ''}
+          >
+            <h3 id={darkMode ? 'darkTitle' : ''}>Personal Website v1</h3>
+            <div className='project-images'>
+              <img
+                className='desktop'
+                src={PWdesktop}
+                alt='Personal Website v1'
+              />
+              <img
+                className='mobile'
+                src={PWmobile}
+                alt='Personal Website v1'
+              />
+            </div>
+            <div>
+              <p>
+                My first personal website was also the first website that I
+                built by myself from scratch using HTML5 and CSS3. I made sure
+                that the website is compatible with mobile devices by
+                implementing CSS flex box layout. My web development skills have
+                improved tremendously since that project.
+              </p>
+            </div>
           </div>
         </div>
       </section>

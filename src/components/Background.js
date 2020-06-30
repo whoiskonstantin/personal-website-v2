@@ -1,8 +1,14 @@
 import React, { useRef, useEffect } from 'react'
 import { gsap, Power0 } from 'gsap'
+import 'intersection-observer'
 import { useInView } from 'react-intersection-observer'
 
 export default function Background({ darkMode }) {
+  async function loadPolyfills() {
+    if (typeof window.IntersectionObserver === 'undefined') {
+      await import('intersection-observer')
+    }
+  }
   const [ref, inView] = useInView({
     // triggerOnce: true,
     rootMargin: '-300px'
@@ -21,9 +27,12 @@ export default function Background({ darkMode }) {
       duration: 1
     })
   }
-  if (inView) {
-    slideIn()
-  }
+  useEffect(() => {
+    if (inView) {
+      slideIn()
+    }
+  }, [inView])
+
   return (
     <section className='container section flex'>
       <h2 className='section-title' id={darkMode ? 'darkTitle' : ''}>

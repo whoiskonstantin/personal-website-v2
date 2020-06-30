@@ -250,6 +250,20 @@ h3.firstline-title {
 .footer {
   text-align: center;
 }
+.fadein {
+  animation-name: fadein;
+  animation-duration: 3s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
 /* MEDIA QUERIES */
 @media (min-width: 360px) {
   h1 {

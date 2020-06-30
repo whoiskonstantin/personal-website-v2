@@ -40,8 +40,7 @@ function App() {
           captivating interfaces for mobile and desktop devices.
         </h2>
         <h2 className='intro bold'>Let’s build something together!</h2>
-        <br />
-        <h3>
+        <h3 className='get-in-touch'>
           <span>Get in touch </span>
           <a
             href='mailto:basmanovk@gmail.com'
@@ -51,7 +50,7 @@ function App() {
           </a>
         </h3>
       </header>
-      <section className='container flex'>
+      <section className='container section flex'>
         <h2 className='section-title' id={darkMode ? 'darkTitle' : ''}>
           Background
         </h2>
@@ -61,31 +60,30 @@ function App() {
             <span className='bold'> John Cabot University in Rome, Italy </span>
             with BA degree in Business Administration focusing on Finance and
             Economics in 2015. Since then I have pursued a career in marketing,
-            sales and management.{' '}
+            sales and management.
           </p>
           <p>
-            I worked as a business development manager in a telecommunication
-            startup –<span className='bold'> BNESIM in Dubai</span>, UAE for
-            almost a year, before moving to Nesebar, Bulgaria where due to
-            seasonal nature of the economy I have{' '}
+            In 2016 I started to work as a business development manager in a
+            telecommunication startup –
+            <span className='bold'> BNESIM in Dubai</span>. In 2017 I moved to
+            Bulgaria where I have worked as a restaurant manager, started my own
+            business and did
+            <span className='bold'> web service freelancing</span>. Freelance
+            work in the field of web development helped me realize that the most
+            exciting part of all my previous professions was{' '}
             <span className='bold'>
-              {' '}
-              established and managed multiple businesses:{' '}
+              crafting admirable user interfaces and landing pages
             </span>
-            restaurant management, import and distribution of pellets (stove
-            fuel) and web services. The later helped me realize that my favorite
-            and the most exciting part of all my professional duties was helping
-            businesses to <span className='bold'>craft and build</span>{' '}
-            captivating user interfaces and help maintain solid online presence.
+            .
           </p>
           <p>
-            After moving to the United States I continually sharpened my web
-            development skills and prepared myself to
-            <span className='bold'> help you on your next big project!</span>
+            Since moving to the United States in 2019 I continued to sharpen my
+            coding skills to prepare myself to join you on your next big
+            project!
           </p>
         </div>
       </section>
-      <section className='container flex '>
+      <section className='container section flex '>
         <h2 className='section-title' id={darkMode ? 'darkTitle' : ''}>
           Skills
         </h2>
@@ -109,7 +107,7 @@ function App() {
             className='sub-section skills-section space-around'
             id={darkMode ? 'darkBorder' : ''}
           >
-            <h3 className='tools-res-title' id={darkMode ? 'darkTitle' : ''}>
+            <h3 className='width-180px' id={darkMode ? 'darkTitle' : ''}>
               Tools and Resources
             </h3>
             <div className='bubbling-container column'>
@@ -137,7 +135,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className='container flex'>
+      <section className='container section flex'>
         <h2 className='section-title' id={darkMode ? 'darkTitle' : ''}>
           Projects
         </h2>
@@ -146,21 +144,19 @@ function App() {
             className='sub-section projects-sub-section'
             id={darkMode ? 'darkBorder' : ''}
           >
-            <h3 id={darkMode ? 'darkTitle' : ''}>Firstline Properties</h3>
+            <h3 className='width-180px' id={darkMode ? 'darkTitle' : ''}>
+              Firstline Properties
+            </h3>
             <div className='project-images'>
               <img
                 className='desktop'
                 src={FLdesktop}
-                alt='Personal Website v1'
+                alt='Firstline website'
               />
-              <img
-                className='mobile'
-                src={FLmobile}
-                alt='Personal Website v1'
-              />
+              <img className='mobile' src={FLmobile} alt='Firstline website' />
             </div>
             <div>
-              <p>
+              <p className='project-description'>
                 A website for a real estate company in Bulgaria. This website
                 was a part of a rebranding and operations optimization process
                 where I was tasked with creating new company name, logo, product
@@ -176,7 +172,9 @@ function App() {
             className='sub-section projects-sub-section'
             id={darkMode ? 'darkBorder' : ''}
           >
-            <h3 id={darkMode ? 'darkTitle' : ''}>Travel Hangman</h3>
+            <h3 className='width-150px' id={darkMode ? 'darkTitle' : ''}>
+              Travel Hangman
+            </h3>
             <div className='project-images'>
               <img
                 className='mobile mobile-large'
@@ -190,20 +188,16 @@ function App() {
               />
             </div>
             <div>
-              <p>
+              <p className='project-description'>
                 My first React web application. In this game player has to
                 correctly guess the capitals of the random countries. Player can
                 choose between different game modes, which include all countries
                 of the world (245), countries recognized by united nations (193)
-                and different regions from those lists. It uses my own graphics
-                and animations implemented trough GSAP library. Application uses
-                stored JSON file from RESTful API
-                (https://restcountries.eu/rest/v2/all). Biggest challenge with
-                this project was to filter and update the objects from JSON
-                file. Some of those updates were: to add properties for
-                countries recognized and not recognized by UN, and to sort
-                through and change special letters like é, å, û to e, a u. All
-                of those manipulations were done with javascript functions.
+                and different regions. Hangman animations were implemented
+                trough GSAP library. Application uses stored JSON file from
+                RESTful API (https://restcountries.eu/rest/v2/all), because of
+                the required multiple computations that would’ve slowed down the
+                rendering.
               </p>
             </div>
           </div>
@@ -211,7 +205,9 @@ function App() {
             className='sub-section projects-sub-section'
             id={darkMode ? 'darkBorder' : ''}
           >
-            <h3 id={darkMode ? 'darkTitle' : ''}>Personal Website v1</h3>
+            <h3 className='width-180px' id={darkMode ? 'darkTitle' : ''}>
+              Personal Website v1
+            </h3>
             <div className='project-images'>
               <img
                 className='desktop'
@@ -225,7 +221,7 @@ function App() {
               />
             </div>
             <div>
-              <p>
+              <p className='project-description'>
                 My first personal website was also the first website that I
                 built by myself from scratch using HTML5 and CSS3. I made sure
                 that the website is compatible with mobile devices by
@@ -237,9 +233,9 @@ function App() {
         </div>
       </section>
       <footer>
-        <h3>
+        <h3 className='footer'>
           <span>Designed & Developed by </span>
-          <span>Konstantin Basmanov /"YEAR"/</span>
+          <span>Konstantin Basmanov {new Date().getFullYear()}</span>
         </h3>
       </footer>
     </div>

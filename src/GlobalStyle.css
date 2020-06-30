@@ -21,6 +21,7 @@ body {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow: hidden; */
 }
 
 h1 {
@@ -142,6 +143,8 @@ h3.width-150px {
   margin: 0 auto;
   width: 90%;
   max-width: 1200px;
+  /* position: relative; */
+  /* overflow: hidden; */
 }
 .section {
   margin-top: 3rem;
@@ -250,6 +253,9 @@ h3.firstline-title {
 .footer {
   text-align: center;
 }
+/* .background-animation {
+  position: relative;
+} */
 /* .fadein {
   animation-name: fadein;
   animation-duration: 3s;

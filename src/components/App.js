@@ -7,7 +7,6 @@ import Hangman1 from '../resources/showcase/hangman-1.png'
 import Hangman2 from '../resources/showcase/hangman-2.png'
 import FLdesktop from '../resources/showcase/firstline-desktop.png'
 import FLmobile from '../resources/showcase/firstline-mobile.png'
-import Background from './Background'
 
 function App() {
   const handleBackgorundColor = () => {
@@ -52,7 +51,39 @@ function App() {
           </a>
         </h3>
       </header>
-      <Background darkMode={darkMode} />
+      <section className='container section flex'>
+        <h2 className='section-title' id={darkMode ? 'darkTitle' : ''}>
+          Background
+        </h2>
+        <div className='section-content'>
+          <p>
+            I graduated from
+            <span className='bold'> John Cabot University in Rome, Italy </span>
+            with BA degree in Business Administration focusing on Finance and
+            Economics in 2015. Since then I have pursued a career in marketing,
+            sales and management.
+          </p>
+          <p>
+            In 2016 I started to work as a business development manager in a
+            telecommunication startup –
+            <span className='bold'> BNESIM in Dubai</span>. In 2017 I moved to
+            Bulgaria where I have worked as a restaurant manager, started my own
+            business and did
+            <span className='bold'> web service freelancing</span>. Freelance
+            work in the field of web development helped me realize that the most
+            exciting part of all my previous professions was{' '}
+            <span className='bold'>
+              crafting admirable user interfaces and landing pages
+            </span>
+            .
+          </p>
+          <p>
+            Since moving to the United States in 2019 I continued to sharpen my
+            coding skills to prepare myself to join you on your next big
+            project!
+          </p>
+        </div>
+      </section>
       <section className='container section flex '>
         <h2 className='section-title' id={darkMode ? 'darkTitle' : ''}>
           Skills
@@ -202,9 +233,9 @@ function App() {
         </div>
       </section>
       <footer>
+        <h3 className='footer'>Designed & Developed by</h3>
         <h3 className='footer'>
-          <span>Designed & Developed by </span>
-          <span>Konstantin Basmanov {new Date().getFullYear()}</span>
+          Konstantin Basmanov {new Date().getFullYear()}
         </h3>
       </footer>
     </div>

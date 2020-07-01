@@ -12,9 +12,9 @@ function App() {
   const handleBackgorundColor = () => {
     let time = new Date().getHours()
     if (time > 19 && time < 8) {
-      return true
+      return false
     }
-    return false
+    return true
   }
 
   let [darkMode, setBackgroundMode] = useState(handleBackgorundColor())

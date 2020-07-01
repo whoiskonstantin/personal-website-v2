@@ -42,11 +42,21 @@ li {
   font-size: 1rem;
   font-weight: 300;
 }
-a {
+
+ul {
+  padding: 0;
+}
+
+.contact-link {
   text-decoration: none;
   color: inherit;
-  padding-bottom: 2px;
+  padding: 1px;
   border-bottom: 2px solid var(--switch-color);
+}
+
+a.contact-link:hover {
+  transition: 0.3s;
+  box-shadow: inset 0 -2rem 0 0 var(--switch-color);
 }
 
 li {
@@ -167,7 +177,7 @@ h3.width-150px {
   border-radius: 60px;
   width: 70px;
   height: 70px;
-  animation-duration: 13s;
+  animation-duration: 9s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1);
   background-size: 70px 210px;
@@ -234,41 +244,35 @@ h3.firstline-title {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  align-self: center;
+}
+
+.project-images a {
+  display: block;
+  align-self: center;
+  align-self: flex-end;
 }
 .desktop {
-  width: 70%;
+  width: 100%;
   max-width: 300px;
-  align-self: center;
 }
 .mobile {
-  width: 30%;
+  width: 100%;
   margin-top: 10%;
   max-width: 100px;
-  align-self: center;
 }
 .mobile-large {
+  width: 100%;
   margin-top: 0;
   max-width: 150px;
 }
 .footer {
   text-align: center;
 }
-/* .background-animation {
-  position: relative;
-} */
-/* .fadein {
-  animation-name: fadein;
-  animation-duration: 3s;
+.contact-list li {
+  display: inline-block;
+  margin: 0 1rem;
 }
-@keyframes fadein {
-  from {
-    opacity: 0%;
-  }
-
-  to {
-    opacity: 100%;
-  }
-} */
 
 /* MEDIA QUERIES */
 @media (min-width: 360px) {
@@ -379,6 +383,11 @@ h3.firstline-title {
 a.darkLink {
   border-bottom: 2px solid var(--d-switch-color);
 }
+a.darkLink:hover {
+  transition: 0.3s;
+  box-shadow: inset 0 -2rem 0 0 var(--d-switch-color);
+  color: #000000;
+}
 #darkBg {
   background-color: var(--d-main-bg-color);
   color: var(--d-font-color);
@@ -411,6 +420,7 @@ a.darkLink {
   display: flex;
   top: 30px;
   right: 30px;
+  line-height: initial;
 }
 /* Container around the slider */
 .switch {

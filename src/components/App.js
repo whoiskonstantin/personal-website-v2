@@ -11,10 +11,10 @@ import FLmobile from '../resources/showcase/firstline-mobile.png'
 function App() {
   const handleBackgorundColor = () => {
     let time = new Date().getHours()
-    if (time > 19 && time < 8) {
-      return false
+    if (time > 19 || time < 8) {
+      return true
     }
-    return true
+    return false
   }
 
   let [darkMode, setBackgroundMode] = useState(handleBackgorundColor())
@@ -30,12 +30,12 @@ function App() {
         onInputChange={handleInputChange}
         setBackgroundMode={setBackgroundMode}
       />
-      <header className='container fadein'>
+      <header className='container'>
         <Greeting />
         <h2 className='intro'>
           I’m <span className='bold'>Konstantin Basmanov</span>, a front-end
-          software engineer based in Chicago, IL with a passion for building
-          captivating interfaces for mobile and desktop devices.
+          software engineer based in Arlington Heights, IL with a passion for
+          building captivating interfaces for mobile and desktop devices.
         </h2>
         <h2 className='intro bold'>Let’s build something together!</h2>
         <h3 className='get-in-touch'>
@@ -56,28 +56,22 @@ function App() {
           <p>
             I graduated from
             <span className='bold'> John Cabot University in Rome, Italy </span>
-            with BA degree in Business Administration focusing on Finance and
-            Economics in 2015. Since then I have pursued a career in marketing,
-            sales and management.
+            with a BA degree in Business Administration focusing on Finance and
+            Economics in 2015.
           </p>
           <p>
-            In 2016 I started to work as a business development manager in a
-            telecommunication startup –
-            <span className='bold'> BNESIM in Dubai</span>. In 2017 I moved to
-            Bulgaria where I have worked as a restaurant manager, started my own
-            business and did
-            <span className='bold'> web service freelancing</span>. Freelance
-            work in the field of web development helped me realize that the most
-            exciting part of all my previous professions was{' '}
-            <span className='bold'>
-              crafting admirable user interfaces and landing pages
-            </span>
-            .
+            After my graduation I worked in management, marketing and sales
+            positions in Bulgaria, Russian Federation and United Arab Emirates.
           </p>
           <p>
-            Since moving to the United States in 2019 I continued to sharpen my
-            coding skills to prepare myself to join you on your next big
-            project!
+            In 2017, I began to freelance for web development and design.
+            Freelance work in the field of web development helped me realize
+            that the most exciting part of all my previous professions
+            was crafting user interfaces and landing pages that people love.
+          </p>
+          <p>
+            When I am not at my work desk I go mountain biking, snowboarding and
+            photographing.
           </p>
         </div>
       </section>
@@ -162,14 +156,14 @@ function App() {
             </div>
             <div>
               <p className='project-description'>
-                A website for a real estate company in Bulgaria. This website
-                was a part of a rebranding and operations optimization process
-                where I was tasked with creating new company name, logo, product
-                catalogues, Facebook page, CRM solution and a website. The goal
-                of the project was to shift company’s focus from Russian
-                speaking to the English speaking clients. It was my first web
-                development project, and I worked on it with the help of other
-                web developer.
+                I designed and built this website for a real estate company in
+                Bulgaria. In this project I was tasked with creating a CMS
+                solution, so that company employees can easily add, edit and
+                delete real estate listings. This project also included SEO
+                optimization, and hosting and domain configuration. As part of
+                the rebranding and sales streamlining process I also created a
+                new company name, logo, product catalogues, Facebook page and a
+                CRM solution.
               </p>
             </div>
           </div>
@@ -198,20 +192,20 @@ function App() {
             </div>
             <div>
               <p className='project-description'>
-                My first React web application. In this game player has to
-                correctly guess the capitals of the random countries. Player can
-                choose between different game modes, which include all countries
-                of the world (245), countries recognized by united nations (193)
-                and different regions. Hangman animations were implemented
-                trough GSAP library. Application uses stored{' '}
+                A simple game that I built with React. Gameplay animations were
+                implemented through GSAP library. Application uses a cached{' '}
                 <a
                   className={`contact-link ${darkMode ? 'darkLink' : ''}`}
                   href='https://restcountries.eu/rest/v2/all'
                 >
-                  JSON file from RESTful API
+                  JSON response from RESTful API
                 </a>
-                , because of the required multiple computations that would’ve
-                slowed down the rendering.
+                , to eliminate time required to complete multiple computations.
+                I used Lodash library and my own methods to filter and eliminate
+                special letters from capital names like “Brasília” > “Brasilia”,
+                and to divide countries between UN recognized and
+                non-recognized. Used React.memo() in keyboard components to
+                prevent useless rendering. Used AWS Amplify for testing the app.
               </p>
             </div>
           </div>
@@ -240,12 +234,13 @@ function App() {
             </div>
             <div>
               <p className='project-description'>
-                My first personal website was also the first website that I
-                built by myself from scratch using HTML5 and CSS3. I made sure
-                that the website is rendered perfectly on both mobile and
-                desktop devices by using responsive design techniques. My web
-                development skills have improved tremendously since that
-                project.
+                One of my personal websites dedicated to travel and photography
+                written with HTML5, CSS3 and vanillaJS. I used CSS flexbox
+                layout module to make the website responsive. Transferred the
+                domain and hosting to AWS and in the process became familiar
+                with some of their services – Amplify, CloudFront, Certificate
+                Manager, Route 53, and S3. My web development skills have
+                improved tremendously since that project.
               </p>
             </div>
           </div>

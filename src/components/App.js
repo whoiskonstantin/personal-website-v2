@@ -19,7 +19,7 @@ function App() {
 
   let [darkMode, setBackgroundMode] = useState(handleBackgorundColor())
 
-  const handleInputChange = e => {
+  const handleInputChange = (e) => {
     setBackgroundMode(e.target.checked)
   }
 
@@ -33,9 +33,9 @@ function App() {
       <header className='container'>
         <Greeting />
         <h2 className='intro'>
-          I’m <span className='bold'>Konstantin Basmanov</span>, a front-end software engineer based
-          in Arlington Heights, IL with a passion for building captivating interfaces for mobile and
-          desktop devices.
+          I’m <span className='bold'>Konstantin Basmanov</span>, a front-end
+          software engineer based in Arlington Heights, IL with a passion for
+          building captivating interfaces for mobile and desktop devices.
         </h2>
         <h2 className='intro bold'>Let’s build something together!</h2>
         <h3 className='get-in-touch'>
@@ -56,18 +56,23 @@ function App() {
           <p>
             I graduated from
             <span className='bold'> John Cabot University in Rome, Italy </span>
-            with a BA degree in Business Administration focusing on Finance and Economics in 2015.
+            with a BA degree in Business Administration focusing on Finance and
+            Economics in 2015.
           </p>
           <p>
-            After my graduation I worked in management, marketing and sales positions in Bulgaria,
-            Russian Federation and United Arab Emirates.
+            After my graduation I worked in management, marketing and sales
+            positions in Bulgaria, Russian Federation and United Arab Emirates.
           </p>
           <p>
-            In 2017, I began to freelance for web development and design. Freelance work in the
-            field of web development helped me realize that the most exciting part of all my
-            previous professions was crafting user interfaces and landing pages that people love.
+            In 2017, I began to freelance for web development and design.
+            Freelance work in the field of web development helped me realize
+            that the most exciting part of all my previous professions
+            was crafting user interfaces and landing pages that people love.
           </p>
-          <p>When I am not at my work desk I go mountain biking, snowboarding and photographing.</p>
+          <p>
+            When I am not at my work desk I go mountain biking, snowboarding and
+            photographing.
+          </p>
         </div>
       </section>
       <section className='container section flex '>
@@ -126,33 +131,56 @@ function App() {
           Projects
         </h2>
         <div className='section-content'>
-          <div className='sub-section projects-sub-section' id={darkMode ? 'darkBorder' : ''}>
+          <div
+            className='sub-section projects-sub-section'
+            id={darkMode ? 'darkBorder' : ''}
+          >
             <h3 className='width-180px' id={darkMode ? 'darkTitle' : ''}>
               Firstline Properties
             </h3>
             <div className='project-images'>
-              <a href='https://firstlinebg.com/' target='_blank' rel='noopener noreferrer'>
-                <img className='desktop' src={FLdesktop} alt='Firstline website' />
+              <a
+                href='https://firstlinebg.com/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <img
+                  className='desktop'
+                  src={FLdesktop}
+                  alt='Firstline website'
+                />
               </a>
-              <a href='https://firstlinebg.com/' target='_blank' rel='noopener noreferrer'>
-                <img className='mobile' src={FLmobile} alt='Firstline website' />
+              <a
+                href='https://firstlinebg.com/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <img
+                  className='mobile'
+                  src={FLmobile}
+                  alt='Firstline website'
+                />
               </a>
             </div>
             <div>
               <p className='project-description'>
-                I <b>designed</b> and <b>built</b> this website for a real estate company in
-                Bulgaria. In this project I was tasked with creating a <b>CMS</b> solution, so that
-                company employees can easily add, edit and delete real estate listings. This project
-                also included <b>SEO optimization</b>, and <b>hosting</b> and{' '}
-                <b>domain configuration</b>. As part of the rebranding and sales streamlining
-                process I also created a new company name, logo, product catalogues, Facebook page
-                and a CRM solution.
+                Designed and built this website for a real estate company in
+                Bulgaria. In this project I was tasked with creating a CMS
+                solution, so that company employees can easily add, edit and
+                delete real estate listings. This project also included SEO
+                optimization, and hosting and domain configuration. As part of
+                the rebranding and sales streamlining process I also created a
+                new company name, logo, product catalogues, Facebook page and a
+                CRM solution.
               </p>
             </div>
           </div>
-          <div className='sub-section projects-sub-section' id={darkMode ? 'darkBorder' : ''}>
-            <h3 className='width-60px' id={darkMode ? 'darkTitle' : ''}>
-              Array
+          <div
+            className='sub-section projects-sub-section'
+            id={darkMode ? 'darkBorder' : ''}
+          >
+            <h3 className='width-150px' id={darkMode ? 'darkTitle' : ''}>
+              Gallows 3000
             </h3>
             <div className='project-images'>
               <a
@@ -160,29 +188,47 @@ function App() {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <img className='desktop' src={ArrayDesktop} alt='Personal Website v1' />
+                <img
+                  className='desktop'
+                  src={ArrayDesktop}
+                  alt='Personal Website v1'
+                />
               </a>
               <a
                 href='https://konstantinbasmanov-nextjs-lwkoyq3yc.vercel.app/'
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <img className='mobile' src={ArrayMobile} alt='Personal Website v1' />
+                <img
+                  className='mobile'
+                  src={ArrayMobile}
+                  alt='Personal Website v1'
+                />
               </a>
             </div>
             <div>
               <p className='project-description'>
-                Built user interface components for Array, a company that offers b2b solutions where
-                users can manage their credit score. This project uses <b>Server Side Rendering</b>{' '}
-                with <b>React</b> and <b>NextJS</b>, <b>RESTful API</b>, and tests with{' '}
-                <b>Cypress</b>. For demonstration purposes the app simulates a logged in user so
-                that the visitor can test it by toggling Id Protection and Credit Lock. I also built
-                a <b>Web Component</b> that could be used by any framework, which uses{' '}
-                <b>Chart.js</b> and can be viewed on Credit Score page.
+                Animated hangman game that built with React. Gameplay animations
+                were implemented through GSAP library. Application uses a cached{' '}
+                <a
+                  className={`contact-link ${darkMode ? 'darkLink' : ''}`}
+                  href='https://restcountries.eu/rest/v2/all'
+                >
+                  JSON response from RESTful API
+                </a>
+                , to eliminate time required to complete multiple computations.
+                I used Lodash library and my own methods to filter and eliminate
+                special letters from capital names, and to divide countries
+                between UN recognized and non-recognized. Used React.memo() in
+                keyboard components to prevent useless rendering. Used AWS
+                Amplify for CI/CD.
               </p>
             </div>
           </div>
-          <div className='sub-section projects-sub-section' id={darkMode ? 'darkBorder' : ''}>
+          <div
+            className='sub-section projects-sub-section'
+            id={darkMode ? 'darkBorder' : ''}
+          >
             <h3 className='width-150px' id={darkMode ? 'darkTitle' : ''}>
               Travel Hangman
             </h3>
@@ -192,32 +238,40 @@ function App() {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <img className='mobile mobile-large' src={Hangman1} alt='Personal Website v1' />
+                <img
+                  className='mobile mobile-large'
+                  src={Hangman1}
+                  alt='Personal Website v1'
+                />
               </a>
               <a
                 href='https://hangman.konstantinbasmanov.com/'
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <img className='mobile mobile-large' src={Hangman2} alt='Personal Website v1' />
+                <img
+                  className='mobile mobile-large'
+                  src={Hangman2}
+                  alt='Personal Website v1'
+                />
               </a>
             </div>
             <div>
               <p className='project-description'>
-                A simple game that I built with React. Gameplay animations were implemented through{' '}
-                <b>GSAP</b> library. Application uses a cached{' '}
+                At{' '}
                 <a
                   className={`contact-link ${darkMode ? 'darkLink' : ''}`}
-                  href='https://restcountries.eu/rest/v2/all'
+                  href='https://array.io/'
                 >
-                  JSON response from <b>RESTful API</b>
-                </a>
-                , to eliminate time required to complete multiple computations. It also uses{' '}
-                <b>Google Maps API</b> to display the capital on the map when the user guesses it
-                correctly. I used <b>Lodash</b> library and my own methods to filter and eliminate
-                special letters from capital names like “Brasília” > “Brasilia”, and to divide
-                countries between UN recognized and non-recognized. Used <b>React.memo()</b> in
-                keyboard components to prevent useless rendering. Used <b>AWS Amplify</b> for CI/CD.
+                  Array
+                </a>{' '}
+                I built components for consumer credit report applications.
+                Worked with a variety of technologies including React, NextJS,
+                Web Components and Server Side Rendering to ensure the best
+                performance and easy maintainability. All pages achieved 99%+
+                performance score in Lighthouse. Other parts of the project
+                included fetching user data using RESTful API and performed
+                unit, e2e, and snapshot tests using Cypress (Mocha).
               </p>
             </div>
           </div>
@@ -250,7 +304,9 @@ function App() {
             </a>
           </li>
         </ul>
-        <p className='footer'>Created by Konstantin Basmanov {new Date().getFullYear()}</p>
+        <p className='footer'>
+          Created by Konstantin Basmanov {new Date().getFullYear()}
+        </p>
       </footer>
     </div>
   )

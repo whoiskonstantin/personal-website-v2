@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import ScrollTrigger from '@terwanerik/scrolltrigger'
 import BackgroundSwitch from './BackgroundSwitch'
 import Greeting from './Greeting'
 import ArrayDesktop from '../resources/showcase/array-desktop.png'
@@ -22,6 +23,30 @@ function App() {
   const handleInputChange = (e) => {
     setBackgroundMode(e.target.checked)
   }
+  const trigger = new ScrollTrigger({
+    trigger: {
+      offset: {
+        viewport: {
+          x: 0,
+          y: (trigger, frame, direction) => {
+            // We check if the trigger is visible, if so, the offset
+            // on the viewport is 0, otherwise it's 20% of the height
+            // of the viewport. This causes the triggers to animate
+            // 'on screen' when the element is in the viewport, but
+            // don't trigger the 'out' class until the element is out
+            // of the viewport.
+
+            // This is the same as returning Math.ceil(0.2 * frame.h)
+            return trigger.visible ? 0 : 0.2
+          },
+        },
+      },
+    },
+  })
+
+  useEffect(() => {
+    trigger.add('[data-trigger]')
+  })
 
   return (
     <div className='App' id={darkMode ? 'darkBg' : ''}>
@@ -30,7 +55,7 @@ function App() {
         onInputChange={handleInputChange}
         setBackgroundMode={setBackgroundMode}
       />
-      <header className='container'>
+      <header data-trigger className='container invisible'>
         <Greeting />
         <h2 className='intro'>
           I’m <span className='bold'>Konstantin Basmanov</span>, a front-end
@@ -48,7 +73,7 @@ function App() {
           </a>
         </h3>
       </header>
-      <section className='container section flex'>
+      <section data-trigger className='container section flex'>
         <h2 className='section-title' id={darkMode ? 'darkTitle' : ''}>
           Background
         </h2>
@@ -76,11 +101,16 @@ function App() {
         </div>
       </section>
       <section className='container section flex '>
-        <h2 className='section-title' id={darkMode ? 'darkTitle' : ''}>
+        <h2
+          data-trigger
+          className='section-title'
+          id={darkMode ? 'darkTitle' : ''}
+        >
           Skills
         </h2>
         <div className='section-content flex-wide'>
           <div
+            data-trigger
             className='sub-section skills-section space-around'
             id={darkMode ? 'darkBorder' : ''}
           >
@@ -95,6 +125,7 @@ function App() {
             </ul>
           </div>
           <div
+            data-trigger
             className='sub-section skills-section space-around'
             id={darkMode ? 'darkBorder' : ''}
           >
@@ -111,6 +142,7 @@ function App() {
             </ul>
           </div>
           <div
+            data-trigger
             className='sub-section skills-section space-around'
             id={darkMode ? 'darkBorder' : ''}
           >
@@ -127,11 +159,16 @@ function App() {
         </div>
       </section>
       <section className='container section flex'>
-        <h2 className='section-title' id={darkMode ? 'darkTitle' : ''}>
+        <h2
+          data-trigger
+          className='section-title'
+          id={darkMode ? 'darkTitle' : ''}
+        >
           Projects
         </h2>
         <div className='section-content'>
           <div
+            data-trigger
             className='sub-section projects-sub-section'
             id={darkMode ? 'darkBorder' : ''}
           >
@@ -176,6 +213,7 @@ function App() {
             </div>
           </div>
           <div
+            data-trigger
             className='sub-section projects-sub-section'
             id={darkMode ? 'darkBorder' : ''}
           >
@@ -206,7 +244,6 @@ function App() {
                 />
               </a>
             </div>
-
             <div>
               <p className='project-description'>
                 International hangman game built with React. Application uses a
@@ -227,6 +264,7 @@ function App() {
             </div>
           </div>
           <div
+            data-trigger
             className='sub-section projects-sub-section'
             id={darkMode ? 'darkBorder' : ''}
           >

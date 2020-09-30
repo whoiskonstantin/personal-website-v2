@@ -77,6 +77,17 @@ footer {
   padding: 20px 30px;
 }
 
+/* [data-trigger].visible, */
+[data-trigger].invisible {
+  opacity: 0;
+  /* transition: opacity 3s ease; */
+}
+
+[data-trigger].visible {
+  opacity: 1;
+  transition: opacity 2s ease;
+}
+
 .greeting {
   position: relative;
   height: 10vh;

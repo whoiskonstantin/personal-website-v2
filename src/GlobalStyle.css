@@ -64,9 +64,12 @@ li {
 }
 
 header {
+  margin: 0 auto 200px;
   padding: 20vh 10px 100px 10px;
   box-sizing: border-box;
-  height: 100vh;
+  width: 90%;
+  max-width: 1200px;
+  height: 80vh;
 }
 section {
   padding: 20px 0;
@@ -77,10 +80,8 @@ footer {
   padding: 20px 30px;
 }
 
-/* [data-trigger].visible, */
 [data-trigger].invisible {
   opacity: 0;
-  /* transition: opacity 3s ease; */
 }
 
 [data-trigger].visible {
@@ -165,7 +166,7 @@ h3.width-60px {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 0 auto 200px;
   width: 90%;
   max-width: 1200px;
 }

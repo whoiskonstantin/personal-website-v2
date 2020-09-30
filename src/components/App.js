@@ -28,15 +28,7 @@ function App() {
       offset: {
         viewport: {
           x: 0,
-          y: (trigger, frame, direction) => {
-            // We check if the trigger is visible, if so, the offset
-            // on the viewport is 0, otherwise it's 20% of the height
-            // of the viewport. This causes the triggers to animate
-            // 'on screen' when the element is in the viewport, but
-            // don't trigger the 'out' class until the element is out
-            // of the viewport.
-
-            // This is the same as returning Math.ceil(0.2 * frame.h)
+          y: (trigger) => {
             return trigger.visible ? 0 : 0.2
           },
         },
@@ -55,7 +47,7 @@ function App() {
         onInputChange={handleInputChange}
         setBackgroundMode={setBackgroundMode}
       />
-      <header data-trigger className='container invisible'>
+      <header data-trigger className='invisible'>
         <Greeting />
         <h2 className='intro'>
           I’m <span className='bold'>Konstantin Basmanov</span>, a front-end
@@ -100,12 +92,8 @@ function App() {
           </p>
         </div>
       </section>
-      <section className='container section flex '>
-        <h2
-          data-trigger
-          className='section-title'
-          id={darkMode ? 'darkTitle' : ''}
-        >
+      <section data-trigger className='container section flex '>
+        <h2 className='section-title' id={darkMode ? 'darkTitle' : ''}>
           Skills
         </h2>
         <div className='section-content flex-wide'>
@@ -158,12 +146,8 @@ function App() {
           </div>
         </div>
       </section>
-      <section className='container section flex'>
-        <h2
-          data-trigger
-          className='section-title'
-          id={darkMode ? 'darkTitle' : ''}
-        >
+      <section data-trigger className='container section flex'>
+        <h2 className='section-title' id={darkMode ? 'darkTitle' : ''}>
           Projects
         </h2>
         <div className='section-content'>

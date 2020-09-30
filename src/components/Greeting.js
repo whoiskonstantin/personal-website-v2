@@ -4,11 +4,10 @@ export default function Greeting() {
   const greetingsList = [
     'Hello!',
     'Здравствуйте!',
-    'Bonjour!',
-    '!مرحبا',
-    'Ciao!',
     'Hola!',
-    '你好!'
+    'नमस्ते!',
+    'Bonjour!',
+    'Ciao!',
   ]
 
   const [indx, setIndx] = useState(0)
@@ -18,7 +17,7 @@ export default function Greeting() {
       y: 10,
       opacity: 0,
       ease: Power0.easeIn,
-      duration: 0.4
+      duration: 0.4,
     })
     gsap.to('.flip', { y: 0, opacity: 1, ease: Power0.easeIn, duration: 0.4 })
   }
@@ -28,7 +27,7 @@ export default function Greeting() {
       y: -10,
       opacity: 0,
       ease: Power0.easeOut,
-      duration: 0.4
+      duration: 0.4,
     })
   }
 
@@ -40,8 +39,8 @@ export default function Greeting() {
     const interval = setInterval(() => {
       animationOut()
       const timeout = setTimeout(() => {
-        if (indx < 6) {
-          setIndx(indx => indx + 1)
+        if (indx < 5) {
+          setIndx((indx) => indx + 1)
         } else {
           setIndx(0)
         }

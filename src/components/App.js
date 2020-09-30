@@ -179,58 +179,8 @@ function App() {
             className='sub-section projects-sub-section'
             id={darkMode ? 'darkBorder' : ''}
           >
-            <h3 className='width-150px' id={darkMode ? 'darkTitle' : ''}>
+            <h3 className='width-130px' id={darkMode ? 'darkTitle' : ''}>
               Gallows 3000
-            </h3>
-            <div className='project-images'>
-              <a
-                href='https://konstantinbasmanov-nextjs-lwkoyq3yc.vercel.app/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <img
-                  className='desktop'
-                  src={ArrayDesktop}
-                  alt='Personal Website v1'
-                />
-              </a>
-              <a
-                href='https://konstantinbasmanov-nextjs-lwkoyq3yc.vercel.app/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <img
-                  className='mobile'
-                  src={ArrayMobile}
-                  alt='Personal Website v1'
-                />
-              </a>
-            </div>
-            <div>
-              <p className='project-description'>
-                Animated hangman game that built with React. Gameplay animations
-                were implemented through GSAP library. Application uses a cached{' '}
-                <a
-                  className={`contact-link ${darkMode ? 'darkLink' : ''}`}
-                  href='https://restcountries.eu/rest/v2/all'
-                >
-                  JSON response from RESTful API
-                </a>
-                , to eliminate time required to complete multiple computations.
-                I used Lodash library and my own methods to filter and eliminate
-                special letters from capital names, and to divide countries
-                between UN recognized and non-recognized. Used React.memo() in
-                keyboard components to prevent useless rendering. Used AWS
-                Amplify for CI/CD.
-              </p>
-            </div>
-          </div>
-          <div
-            className='sub-section projects-sub-section'
-            id={darkMode ? 'darkBorder' : ''}
-          >
-            <h3 className='width-150px' id={darkMode ? 'darkTitle' : ''}>
-              Travel Hangman
             </h3>
             <div className='project-images'>
               <a
@@ -256,6 +206,57 @@ function App() {
                 />
               </a>
             </div>
+
+            <div>
+              <p className='project-description'>
+                International hangman game built with React. Application uses a
+                cached{' '}
+                <a
+                  className={`contact-link ${darkMode ? 'darkLink' : ''}`}
+                  href='https://restcountries.eu/rest/v2/all'
+                >
+                  JSON response from RESTful API
+                </a>{' '}
+                to eliminate time required to complete multiple computations.
+                Lodash library and my own methods are used to filter and
+                eliminate special letters from capital names, and to divide
+                countries between UN recognized and non-recognized. Used
+                React.memo() in keyboard components to prevent useless
+                rendering. AWS Amplify was used for for CI/CD.
+              </p>
+            </div>
+          </div>
+          <div
+            className='sub-section projects-sub-section'
+            id={darkMode ? 'darkBorder' : ''}
+          >
+            <h3 className='width-60px' id={darkMode ? 'darkTitle' : ''}>
+              Array
+            </h3>
+            <div className='project-images'>
+              <a
+                href='https://konstantinbasmanov-nextjs.vercel.app'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <img
+                  className='desktop'
+                  src={ArrayDesktop}
+                  alt='Personal Website v1'
+                />
+              </a>
+              <a
+                href='https://konstantinbasmanov-nextjs.vercel.app'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <img
+                  className='mobile'
+                  src={ArrayMobile}
+                  alt='Personal Website v1'
+                />
+              </a>
+            </div>
             <div>
               <p className='project-description'>
                 At{' '}
@@ -265,13 +266,13 @@ function App() {
                 >
                   Array
                 </a>{' '}
-                I built components for consumer credit report applications.
+                I built components for consumer credit report application.
                 Worked with a variety of technologies including React, NextJS,
                 Web Components and Server Side Rendering to ensure the best
                 performance and easy maintainability. All pages achieved 99%+
                 performance score in Lighthouse. Other parts of the project
-                included fetching user data using RESTful API and performed
-                unit, e2e, and snapshot tests using Cypress (Mocha).
+                included fetching and sending back user data over RESTful API
+                and unit, e2e, and snapshot testing using Cypress.
               </p>
             </div>
           </div>
